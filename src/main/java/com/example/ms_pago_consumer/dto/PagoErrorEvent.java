@@ -20,4 +20,5 @@ public class PagoErrorEvent {
     private Long idPago;
     private String motivoError;
     private LocalDateTime fechaError;
+    private Integer monto;
 }
