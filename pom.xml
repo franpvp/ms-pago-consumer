@@ -13,7 +13,7 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>ms-pago-consumer</artifactId>
+	<artifactId>mspagoconsumer</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-pago-consumer</name>
 	<description>Kafka Consumer for Pago Service</description>
@@ -125,7 +125,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.example.ms_pago_consumer.MsPagoConsumerApplication</mainClass>
+					<mainClass>com.example.mspagoconsumer.MsPagoConsumerApplication</mainClass>
 				</configuration>
 			</plugin>
 
