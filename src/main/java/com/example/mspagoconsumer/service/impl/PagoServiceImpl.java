@@ -32,7 +32,7 @@ public class PagoServiceImpl implements PagoService {
                 .orden(OrdenEntity.builder().id(event.getIdOrden()).build())
                 .metodoPago(MetodoPagoEntity.builder().id(event.getIdMetodoPago()).build())
                 .monto(event.getMonto())
-                .estadoPago(EstadoPagoEntity.builder().id(1l).build())
+                .estadoPago(EstadoPagoEntity.builder().id(1L).build())
                 .fechaCreacion(LocalDateTime.now())
                 .build();
 
@@ -46,9 +46,6 @@ public class PagoServiceImpl implements PagoService {
     public PagoEntity buscarPagoConIdOrden(Long idOrden){
         return pagoRepository.findByOrdenId(idOrden).orElseThrow( () -> new OrdenNoEncontradaException("Orden no encontrada"));
     }
-
-
-
 
     @Override
     public PagoFeignResponse llamarAzureFunction(PagoEntity pago) {

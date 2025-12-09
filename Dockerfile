@@ -11,7 +11,10 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 ENV TZ=America/Santiago
 
-COPY --from=build /app/target/ms-pago-consumer-0.0.1-SNAPSHOT.jar app.jar
+# Copiar el wallet a la imagen
+COPY Wallet_DQXABCOJF1X64NFC /app/wallet
+
+COPY --from=build /app/target/mspagoconsumer-0.0.1-SNAPSHOT.jar app.jar
 
 # Variables alineadas con application.properties
 ENV KAFKA_BOOTSTRAP_SERVERS=kafka:9092 \

@@ -1,7 +1,9 @@
 package com.example.mspagoconsumer.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
@@ -9,6 +11,8 @@ import lombok.Setter;
 @Table(name = "CATEGORIA")
 @Getter
 @Setter
+@NoArgsConstructor
+@AllArgsConstructor
 public class CategoriaEntity {
 
     @Id
@@ -21,5 +25,8 @@ public class CategoriaEntity {
 
     @Column(name = "descripcion")
     private String descripcion;
+
+    @Column(name = "nombre_directorio")
+    private String nombreDirectorio;
 }
 

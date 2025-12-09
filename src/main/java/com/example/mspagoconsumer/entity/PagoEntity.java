@@ -5,12 +5,13 @@ import lombok.*;
 
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "PAGO")
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 @Getter
 @Setter
-@Builder
-@ToString
+@Entity
+@Table(name = "PAGO")
 public class PagoEntity {
 
     @Id

@@ -1,17 +1,21 @@
 package com.example.mspagoconsumer.entity;
 
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "CLIENTE")
 @Getter
 @Setter
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ClienteEntity {
 
     @Id
@@ -39,6 +43,6 @@ public class ClienteEntity {
     private String ciudad;
 
     @Column(name = "fecha_registro", nullable = false)
-    private LocalDate fechaRegistro = LocalDate.now();
+    private LocalDateTime fechaRegistro;
 }
 
