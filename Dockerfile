@@ -13,8 +13,8 @@ ENV TZ=America/Santiago
 
 COPY --from=build /app/target/ms-pago-consumer-0.0.1-SNAPSHOT.jar app.jar
 
+# Variables alineadas con application.properties
 ENV KAFKA_BOOTSTRAP_SERVERS=kafka:9092 \
-    KAFKA_GROUP_ID=ms-pago-consumer \
-    KAFKA_TOPIC=pagos
+    KAFKA_GROUP_ID=ms-pago-consumer-grp
 
 ENTRYPOINT ["java","-jar","/app/app.jar"]
