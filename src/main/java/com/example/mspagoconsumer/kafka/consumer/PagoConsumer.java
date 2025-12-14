@@ -52,7 +52,7 @@ public class PagoConsumer {
                         PagoErrorEvent.builder()
                                 .idOrden(pago.getOrden().getId())
                                 .idPago(pago.getId())
-                                .motivoError("Azure Function no disponible")
+                                .motivoError("ERROR CONEXION")
                                 .fechaError(LocalDateTime.now())
                                 .build()
                 );
